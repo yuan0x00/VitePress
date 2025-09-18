@@ -81,16 +81,7 @@ graph TD
 - 日志管理与线上监控（埋点 / 性能监控 / ANR 收集）
 - HTTPS / 证书校验 / 安全加固
 
-## 九、Kotlin 与现代开发
-
-- 空安全机制（? / !! / let / also / apply / run / with）
-- 扩展函数 / 属性委托 / 类委托
-- 协程结构化并发 / CoroutineScope / SupervisorJob
-- Flow 响应式流 / 冷流热流
-- 密封类 / 数据类 / 伴生对象
-- 高阶函数 / Lambda / inline / crossinline
-
-## 十、Jetpack 与 Compose
+## 九、Jetpack 与 Compose
 
 - ViewModel / LiveData / StateFlow
 - Navigation 组件
@@ -100,7 +91,7 @@ graph TD
 - Compose：remember / mutableStateOf / SideEffect / LaunchedEffect
 - Compose 重组机制与性能优化
 
-## 十一、工具与工程化
+## 十、工具与工程化
 
 - Gradle 构建脚本与依赖管理
 - 多渠道打包 / BuildConfig / ProductFlavors
@@ -109,7 +100,7 @@ graph TD
 - APK 结构分析（DEX / resources.arsc / assets / lib）
 - 包体积优化（资源压缩 / 代码混淆 / So 精简）
 
-## 十二、跨平台与新技术
+## 十一、跨平台与新技术
 
 - Flutter 基础与混合开发
 - React Native / Weex 原理
