@@ -166,7 +166,7 @@ export default defineConfig({
         nav: await generateNav(),
         sidebar: await generateSidebar(),
         socialLinks: [
-            {icon: 'github', link: 'https://github.com/your-repo'},
+            {icon: 'github', link: 'https://github.com/yuan0x00'},
         ],
     },
     markdown: {
