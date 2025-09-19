@@ -25,6 +25,7 @@ concurrency:
 jobs:
   # 构建工作
   build:
+    if: github.actor != 'dependabot[bot]'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -53,6 +54,7 @@ jobs:
 
   # 部署工作
   deploy:
+    if: github.actor != 'dependabot[bot]'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
