@@ -140,13 +140,16 @@ const buildSidebar = async () => {
 
 export default defineConfig({
     title: 'Blog',
-    description: 'Android、Java、Kotlin 学习笔记与图表示例',
+    description: 'Blog',
     lang: 'zh-CN',
     base: '/VitePress/',
     cleanUrls: true,
     lastUpdated: true,
+    head: [
+        ['link', {rel: 'icon', href: '/android.svg'}],
+    ],
     themeConfig: {
-        logo: "/images/android.svg",
+        logo: "/android.svg",
         outline: {
             label: "目录",
         },

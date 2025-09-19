@@ -6,7 +6,7 @@ hero:
   text: "Blog"
   tagline: "Blog"
   image:
-    src: /images/android.svg
+    src: /android.svg
     alt: image
 
 features:
