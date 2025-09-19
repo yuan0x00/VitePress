@@ -146,7 +146,8 @@ export default defineConfig({
     cleanUrls: true,
     lastUpdated: true,
     head: [
-        ['link', {rel: 'icon', href: '/android.svg'}],
+        ['link', {rel: 'icon', type: 'image/svg+xml', href: 'https://vitepress.dev/vitepress-logo-mini.svg'}],
+        ['link', {rel: 'icon', type: 'image/png', href: 'https://vitepress.dev/vitepress-logo-mini.png'}],
     ],
     themeConfig: {
         logo: "/android.svg",
