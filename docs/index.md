@@ -7,23 +7,19 @@ hero:
   tagline: "Blog"
   image:
     src: /images/android.svg
-    
-  actions:
-    - theme: brand
-      text: GitHub
-      link: https://github.com/
+    alt: image
 
 features:
   - title: Android
     details: Android
     link: android/index
     linkText: Android
-    
+
   - title: Java
     details: Java
     link: java/index
     linkText: Java
-    
+
   - title: Kotlin
     details: Kotlin
     link: kotlin/index

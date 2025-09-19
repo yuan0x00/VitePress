@@ -100,7 +100,7 @@ const buildNav = async () => {
             })
     );
 
-    return [{text: 'Home', link: '/'}, ...navItems.filter(Boolean) as {text: string; link: string}[]];
+    return [{text: 'Home', link: '/'}, ...navItems.filter(Boolean) as { text: string; link: string }[]];
 };
 
 const buildSidebar = async () => {
@@ -145,12 +145,17 @@ export default defineConfig({
     base: '/VitePress/',
     cleanUrls: true,
     lastUpdated: true,
-    head: [
-        ['meta', {name: 'theme-color', content: '#1e80ff'}],
-        ['meta', {name: 'description', content: 'Android、Java、Kotlin 学习笔记与图表示例'}],
-        ['link', {rel: 'icon', href: '/images/android.svg'}],
-    ],
     themeConfig: {
+        logo: "/images/android.svg",
+        outline: {
+            label: "目录",
+        },
+        docFooter: {
+            prev: "上一页",
+            next: "下一页",
+        },
+        darkModeSwitchLabel: "深浅模式",
+        returnToTopLabel: "返回顶部",
         search: {
             provider: 'local',
         },
