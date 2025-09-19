@@ -7,27 +7,27 @@ const MermaidExample = (md: MarkdownRenderer) => {
         throw new Error('defaultRenderer is undefined');
     }
 
+    const {escapeHtml} = md.utils;
+
+    const buildCustomBlock = (type: 'warning' | 'note', title: string, content: string) => {
+        const escaped = escapeHtml(content.trim());
+        const paragraphs = escaped
+            .split(/\n{2,}/)
+            .filter(Boolean)
+            .map(paragraph => `<p>${paragraph.replace(/\n/g, '<br>')}</p>`)
+            .join('');
+        return `<div class="${type === 'warning' ? 'warning' : 'tip'} custom-block"><p class="custom-block-title">${title}</p>${paragraphs}</div>`;
+    };
+
     md.renderer.rules.fence = (tokens, index, options, env, slf) => {
         const token = tokens[index];
         const language = token.info.trim();
         if (language.startsWith('mermaid')) {
-            return `
-      <Suspense> 
-      <template #default>
-      <Mermaid id="mermaid-${index}" :showCode="${
-                language === 'mermaid-example'
-            }" graph="${encodeURIComponent(token.content)}"></Mermaid>
-      </template>
-        <!-- loading state via #fallback slot -->
-        <template #fallback>
-          Loading...
-        </template>
-      </Suspense>
-`;
+            return `<Mermaid id="mermaid-${index}" graph="${encodeURIComponent(token.content)}" />`;
         } else if (language === 'warning') {
-            return `<div class="warning custom-block"><p class="custom-block-title">WARNING</p><p>${token.content}}</p></div>`;
+            return buildCustomBlock('warning', 'WARNING', token.content);
         } else if (language === 'note') {
-            return `<div class="tip custom-block"><p class="custom-block-title">NOTE</p><p>${token.content}}</p></div>`;
+            return buildCustomBlock('note', 'NOTE', token.content);
         } else if (language === 'regexp') {
             // shiki doesn't yet support regexp code blocks, but the javascript
             // one still makes RegExes look good
