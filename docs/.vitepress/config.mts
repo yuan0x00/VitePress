@@ -2,7 +2,7 @@ import * as fs from 'node:fs/promises';
 import type {Dirent} from 'node:fs';
 import * as path from 'node:path';
 import {defineConfig} from 'vitepress';
-import MermaidExample from './mermaid-markdown-all';
+import {setupMermaidMarkdown} from './mermaid';
 
 const DOCS_ROOT = path.resolve(__dirname, '..');
 const collator = new Intl.Collator('en', {numeric: true, sensitivity: 'base'});
@@ -179,7 +179,7 @@ export default defineConfig({
             dark: 'github-dark',
         },
         config: (md) => {
-            MermaidExample(md);
+            setupMermaidMarkdown(md);
         },
     },
 });
