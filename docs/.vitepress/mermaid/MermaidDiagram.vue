@@ -44,7 +44,7 @@
 import {computed, nextTick, onBeforeUnmount, onMounted, reactive, ref, watch} from 'vue';
 import {useData} from 'vitepress';
 import type {MermaidConfig} from 'mermaid';
-import {createMermaidRenderer} from '../renderer';
+import {createMermaidRenderer} from './renderer';
 
 const props = defineProps<{ id: string; graph: string }>();
 

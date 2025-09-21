@@ -2,7 +2,7 @@ import * as fs from 'node:fs/promises';
 import type {Dirent} from 'node:fs';
 import * as path from 'node:path';
 import {defineConfig} from 'vitepress';
-import {setupMermaidMarkdown} from './mermaid';
+import {setupMermaidMarkdown} from "./mermaid/markdown-plugin";
 
 const DOCS_ROOT = path.resolve(__dirname, '..');
 const collator = new Intl.Collator('en', {numeric: true, sensitivity: 'base'});

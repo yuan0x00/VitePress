@@ -1,5 +1,5 @@
 import DefaultTheme from 'vitepress/theme';
-import {MermaidDiagram} from '../mermaid';
+import {default as MermaidDiagram} from '../mermaid/MermaidDiagram.vue';
 import type {EnhanceAppContext} from 'vitepress';
 import './style.css'
 
