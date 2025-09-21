@@ -11,6 +11,7 @@
     "vitepress": "^1.6.4"
   },
   "dependencies": {
+    "esbuild": "^0.25.10",
     "vue": "^3.5.21"
   }
 }
