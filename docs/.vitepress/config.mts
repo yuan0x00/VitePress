@@ -165,6 +165,9 @@ export default defineConfig({
         lastUpdated: {
             text: '最近更新',
         },
+        editLink: {
+            pattern: 'https://github.com/yuan0x00/VitePress/blob/main/docs/:path'
+        },
         socialLinks: [
             {icon: 'github', link: 'https://github.com/yuan0x00/VitePress/'},
         ],
