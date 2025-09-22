@@ -155,8 +155,8 @@ export default defineConfig({
             label: "目录",
         },
         docFooter: {
-            prev: "上一页",
-            next: "下一页",
+            prev: "上一篇",
+            next: "下一篇",
         },
         darkModeSwitchLabel: "深浅模式",
         returnToTopLabel: "返回顶部",
