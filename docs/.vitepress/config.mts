@@ -128,7 +128,7 @@ const buildSidebar = async () => {
     if (rootItems.length > 0) {
         sidebar['/'] = [
             {
-                text: '文档概览',
+                text: '概览',
                 collapsed: false,
                 items: rootItems,
             },
@@ -160,16 +160,13 @@ export default defineConfig({
         },
         darkModeSwitchLabel: "深浅模式",
         returnToTopLabel: "返回顶部",
-        search: {
-            provider: 'local',
-        },
         nav: await buildNav(),
         sidebar: await buildSidebar(),
         lastUpdated: {
             text: '最近更新',
         },
         socialLinks: [
-            {icon: 'github', link: 'https://github.com/yuan0x00'},
+            {icon: 'github', link: 'https://github.com/yuan0x00/VitePress/'},
         ],
     },
     markdown: {
