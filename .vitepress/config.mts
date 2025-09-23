@@ -4,7 +4,7 @@ import * as path from 'node:path';
 import {defineConfig} from 'vitepress';
 import {setupMermaidMarkdown} from "./mermaid/markdown-plugin";
 
-const DOCS_ROOT = path.resolve(__dirname, '..');
+const DOCS_ROOT = path.resolve(__dirname, '../docs');
 const collator = new Intl.Collator('en', {numeric: true, sensitivity: 'base'});
 
 const toFsPath = (...segments: string[]) => path.join(DOCS_ROOT, ...segments.filter(Boolean));
@@ -143,6 +143,7 @@ export default defineConfig({
     description: 'Blog',
     lang: 'zh-CN',
     base: '/VitePress/',
+    srcDir: "docs",
     cleanUrls: true,
     lastUpdated: true,
     head: [
