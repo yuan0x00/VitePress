@@ -151,6 +151,11 @@ export default defineConfig({
         ['link', {rel: 'icon', type: 'image/png', href: 'https://vitepress.dev/vitepress-logo-mini.png'}],
     ],
     themeConfig: {
+        nav: await buildNav(),
+        sidebar: await buildSidebar(),
+        search: {
+            provider: 'local',
+        },
         logo: "/android.svg",
         outline: {
             label: "目录",
@@ -159,13 +164,11 @@ export default defineConfig({
             prev: "上一篇",
             next: "下一篇",
         },
-        darkModeSwitchLabel: "深浅模式",
-        returnToTopLabel: "返回顶部",
-        nav: await buildNav(),
-        sidebar: await buildSidebar(),
         lastUpdated: {
             text: '最近更新',
         },
+        darkModeSwitchLabel: "深浅模式",
+        returnToTopLabel: "返回顶部",
         editLink: {
             pattern: 'https://github.com/yuan0x00/VitePress/blob/main/docs/:path'
         },
