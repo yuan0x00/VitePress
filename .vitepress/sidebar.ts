@@ -17,6 +17,7 @@ const androidSidebar: DefaultTheme.SidebarItem[] = [
     },
     {
         text: '语言与基础',
+        collapsed: false,
         items: [
             createSidebarItem('/android/语言与基础/Android应用构建流程'),
             createSidebarItem('/android/语言与基础/Android应用启动流程'),
@@ -26,6 +27,7 @@ const androidSidebar: DefaultTheme.SidebarItem[] = [
     },
     {
         text: '组件与机制',
+        collapsed: false,
         items: [
             {
                 text: '应用组件',
@@ -45,6 +47,7 @@ const androidSidebar: DefaultTheme.SidebarItem[] = [
     },
     {
         text: '主流库源码',
+        collapsed: false,
         items: [
             {
                 text: 'Jetpack',
@@ -67,6 +70,7 @@ const androidSidebar: DefaultTheme.SidebarItem[] = [
     },
     {
         text: '面试题',
+        collapsed: false,
         items: [
             createSidebarItem('/android/面试题/面试题'),
         ],
